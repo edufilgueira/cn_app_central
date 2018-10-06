@@ -21,6 +21,6 @@ sudo apt-get install arduino-mk
 
 ### Preparando o projeto shell
 
-[![Alt text](https://img.youtube.com/vi/VID/0.jpg)](https://www.youtube.com/watch?v=_EKwvHQctyY)
+[![Alt text](https://www.shareicon.net/data/128x128/2016/07/09/118722_video_512x512.png)](https://www.youtube.com/watch?v=_EKwvHQctyY)
 
 
