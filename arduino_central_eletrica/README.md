@@ -21,6 +21,16 @@ sudo apt-get install arduino-mk
 
 ### Preparando o projeto shell
 
-[![Alt text](https://www.shareicon.net/data/128x128/2016/07/09/118722_video_512x512.png)](https://www.youtube.com/watch?v=_EKwvHQctyY)
+https://www.youtube.com/watch?v=_EKwvHQctyY
 
+1. criar a pasta sketchbook
 
+```
+mkdir sketchbook
+```
+Copia o arquivo _Arduino.mk_ para a pasta criada
+
+```
+ln -s /usr/share/arduino/Arduino.mk
+
+```
