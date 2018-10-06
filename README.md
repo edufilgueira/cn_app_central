@@ -1,1 +1,1 @@
-# Programa de automação CN
+# app_central_cn
