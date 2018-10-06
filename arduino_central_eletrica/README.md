@@ -57,6 +57,16 @@ ARDUINO_DIR = /usr/share/arduino/
 include ../Arduino.mk
 ```
 
+#### 6. Rodando a aplicação
 
+Compilar a aplicação
 
+```
+make
+```
 
+Upload da aplicação
+
+```
+sudo make upload
+```
