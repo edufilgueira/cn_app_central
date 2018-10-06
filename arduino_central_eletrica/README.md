@@ -1,6 +1,6 @@
 # Congfigurar o build arduino via shell
 
-### Instalando o IDE Arduino
+## Instalando o IDE Arduino
 ```
 sudo apt-get update && sudo apt-get upgrade
 ```
@@ -13,35 +13,36 @@ sudo apt-get install arduino
 sudo apt-get install avr-libc libftdi1 avrdude openjdk-6-jre librxtx-java
 ```
 
-### Preparando o arduino pelo terminal
+## Preparando o arduino pelo terminal
 
 ```
 sudo apt-get install arduino-mk
 ```
 
-### Preparando o projeto shell
+## Preparando o projeto shell
 
 https://www.youtube.com/watch?v=_EKwvHQctyY
 
-1. criar a pasta sketchbook
+#### 1. criar a pasta sketchbook
 
 ```
 mkdir sketchbook
 ```
-2. Copiar o arquivo _Arduino.mk_ para a pasta sketchbook criada
+#### 2. Copiar o arquivo _Arduino.mk_ para a pasta sketchbook criada
 
 ```
 ln -s /usr/share/arduino/Arduino.mk
 ```
 
-3. Criar a pasta do projeto
+#### 3. Criar a pasta do projeto
 ```
 mkdir projeto
 ```
 
-4. Criar o arquivo.ino na pasta do projeto com o programa arduino
+#### 4. Criar o arquivo.ino na pasta do projeto com o programa arduino
+Crie o programa que será executado pelo arduino.
 
-5. Criar o arquivo Makefile e escrever nele o seguinte codigo
+#### 5. Criar o arquivo Makefile e escrever nele o seguinte codigo
 
 ```
 sudo nano Makefile
