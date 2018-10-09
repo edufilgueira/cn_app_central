@@ -49,14 +49,14 @@
   </div>-->
 </nav>
 
-<h1>Grupo Arcondicionado Direita 2</h1>
+<h1>Arcondicionado Direita</h1>
 <hr>
 
 <div class="port">
 <span class="titulo">Temperatura</span>
   <div class="center">
     <label class="label">
-      <input id="C00" class="label__checkbox" type="checkbox" />
+      <input id="T00" class="label__checkbox" type="checkbox" />
         <span class="label__text">
           <a class="label__check__temperatura botaoEnvia" id="00" value="ON" style="color: white;font-weight: bold;">
 			OFF
@@ -184,12 +184,12 @@ $(document).ready(function(){
 		if(valor == "ON")
 		{
 			$(this).attr('value','OF');
-			$(this).html(statusReturn(pino));
+			$(this).html(statusReturn(0));
 		}
 		else if(valor == "OF")
 		{
 			$(this).attr('value','ON');
-			$(this).html(statusReturn(pino));
+			$(this).html(statusReturn(1));
 		}
     });
 	
@@ -288,14 +288,7 @@ $(document).ready(function(){
 				$('#C01').prop("checked", verificarChecked(data._pino1));
 				$('#C02').prop("checked", verificarChecked(data._pino2));
 				$('#C03').prop("checked", verificarChecked(data._pino3));
-				
-				console.log($('#04').attr('value') + " - " + statusONOFF(data._pino4));
-				console.log($('#C04').prop('checked') + " - " + verificarChecked(data._pino4));
-				
-				
-				
-					$('#C04').prop("checked", verificarChecked(data._pino4));
-				
+				$('#C04').prop("checked", verificarChecked(data._pino4));		
 				$('#C05').prop("checked", verificarChecked(data._pino5));
 				$('#C06').prop("checked", verificarChecked(data._pino6));
 		    }
@@ -304,7 +297,7 @@ $(document).ready(function(){
     }
 	fazerRequisicao();
     // A cada 1000 milis (1 segundo), faça uma nova requisição.
-    setInterval(fazerRequisicao, 4000);
+    setInterval(fazerRequisicao, 3000);
   	// Acredito que 3000 (3 segundos) ou mais seja o ideal para um serviço online.
   	// Caso use local host, arrisco colocar ate 400 milis, você tera uma boa resposta. 
 });
