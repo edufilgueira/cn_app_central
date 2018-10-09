@@ -58,9 +58,9 @@
     <label class="label">
       <input id="T00" class="label__checkbox" type="checkbox" />
         <span class="label__text">
-          <a class="label__check__temperatura botaoEnvia" id="00" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
+          <span class="T00" id="T00" value="ON" style="color: white;font-weight: bold;">
+			O
+          </span>
       </span>
     </label>
   </div>
@@ -184,12 +184,12 @@ $(document).ready(function(){
 		if(valor == "ON")
 		{
 			$(this).attr('value','OF');
-			$(this).html(statusReturn(0));
+			$(this).html(statusReturnProvisorio(0));
 		}
 		else if(valor == "OF")
 		{
 			$(this).attr('value','ON');
-			$(this).html(statusReturn(1));
+			$(this).html(statusReturnProvisorio(1));
 		}
     });
 	
@@ -230,6 +230,16 @@ $(document).ready(function(){
         return false;
     }
 
+	function statusReturnProvisorio (valor) {
+    	if(valor == 0) {
+    		return 'ON';
+    	}
+    	else if(valor == 1) {
+    		return "OFF";
+    	}
+    	// else { return "Desconhecido";}
+    }
+	
     function statusReturn (valor) {
     	if(valor == 0) {
     		return '<i class="fa fa-check icon"></i>';
@@ -269,7 +279,7 @@ $(document).ready(function(){
 		    jsonpCallback: 'dados', // IMPORTANTE
 		    success: function(data,status,xhr) {
 			//console.log(data)
-				//$('#temperatura1').text(data.temperatura);
+				$('#T00').text(data.temperatura);
 				$('#00').html(statusReturn(data._pino0));
 				$('#01').html(statusReturn(data._pino1));
 				$('#02').html(statusReturn(data._pino2));
