@@ -58,9 +58,9 @@
     <label class="label">
       <input id="T00" class="label__checkbox" type="checkbox" />
         <span class="label__text">
-          <span class="T00" id="T00" value="ON" style="color: white;font-weight: bold;">
-			O
-          </span>
+          <a class="label__check__temperatura" id="displayTemp00" value="ON" style="color: white;font-weight: bold;">
+			0
+		  </a>
       </span>
     </label>
   </div>
@@ -130,7 +130,7 @@
         <span class="label__text">
           <a class="label__check botaoEnvia" id="04" value="ON" style="color: white;font-weight: bold;">
 			OFF
-          </a>
+          </a>		  
       </span>
     </label>
   </div>
@@ -278,8 +278,8 @@ $(document).ready(function(){
 		    jsonp: false,
 		    jsonpCallback: 'dados', // IMPORTANTE
 		    success: function(data,status,xhr) {
-			//console.log(data)
-				$('#T00').text(data.temperatura);
+
+				$('#displayTemp00').html(data.temperatura+'º');
 				$('#00').html(statusReturn(data._pino0));
 				$('#01').html(statusReturn(data._pino1));
 				$('#02').html(statusReturn(data._pino2));
