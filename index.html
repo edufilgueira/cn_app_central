@@ -47,7 +47,10 @@
 
 var sessaoNome = sessionStorage.getItem('usuario');
 var sessaoSenha = sessionStorage.getItem('senha');
-if( sessaoNome != ''){
+var sessaoAcesso = sessionStorage.getItem('acesso');
+
+	
+if( sessaoNome != null){
 	$("#usuario").val(sessaoNome);
 	$("#senha").val(sessaoSenha);
 }
