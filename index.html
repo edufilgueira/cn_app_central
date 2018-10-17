@@ -53,6 +53,7 @@ var sessaoAcesso = sessionStorage.getItem('acesso');
 if( sessaoNome != null){
 	$("#usuario").val(sessaoNome);
 	$("#senha").val(sessaoSenha);
+	$("#lembrar").prop("checked", true);
 }
 
 $(".btn-signin").click(function(){
