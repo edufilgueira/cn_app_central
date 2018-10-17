@@ -5,331 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
   <script src="js/jquery-3.3.1.min.js"></script>
-  <link rel="stylesheet" href="bootstrap-4.0.0/css/bootstrap.css"/>
-  <script src="bootstrap-4.0.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/login.css"/>
+  <script src="js/login.js"></script>
   <title>Central Inteligence</title>
-  <link rel="stylesheet" href="css/style.css">
   <link href="img/icon.png" rel="icon" type="image/png" />
+  <link href="bootstrap-3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+
 </head>
 
 <body>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-
-<nav class="navbar navbar-expand-lg navbar-light bg-green">
-  <a class="navbar-brand" href="#"><img src="img/icon.png" class="icoimg"/>CENTRAL CN</a>
-  <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>-->
-
-  <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
-
-  </div>-->
-</nav>
-
-<h1>Arcondicionado Direita</h1>
-<hr>
-
-<div class="port">
-<span class="titulo">Temp</span>
-  <div class="center">
-    <label class="label">
-      <input id="T00" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check__temperatura" id="displayTemp00" value="ON" style="color: white;font-weight: bold;">
-			0
-		  </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme00</span>
-  <div class="center">
-    <label class="label">
-      <input id="C00" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="00" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme01</span>
-  <div class="center">
-    <label class="label">
-      <input id="C01" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="01" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme02</span>
-  <div class="center">
-    <label class="label">
-      <input id="C02" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="02" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme03</span>
-  <div class="center">
-    <label class="label">
-      <input id="C03" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="03" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme04</span>
-  <div class="center">
-    <label class="label">
-      <input id="C04" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="04" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>		  
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme05</span>
-  <div class="center">
-    <label class="label">
-      <input id="C05" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="05" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-<div class="port">
-<span class="titulo">Arme06</span>
-  <div class="center">
-    <label class="label">
-      <input id="C06" class="label__checkbox" type="checkbox" />
-        <span class="label__text">
-          <a class="label__check botaoEnvia" id="06" value="ON" style="color: white;font-weight: bold;">
-			OFF
-          </a>
-      </span>
-    </label>
-  </div>
-</div>
-
-
-
-
-
-</div>
-
-
-<script type="text/javascript">
-var url = 'http://192.168.0.220:1000';
-
-
-$(document).ready(function(){
-	$('.botaoEnvia').click(function(){
-        var pino  = $(this).attr('id');
-        var valor = $(this).attr('value');
-		enviaDados(pino+valor);
-		console.log("pino:"+pino+" valor:"+valor);
-		if(valor == "ON")
-		{
-			$(this).attr('value','OF');
-			$(this).html(statusReturnProvisorio(0));
-		}
-		else if(valor == "OF")
-		{
-			$(this).attr('value','ON');
-			$(this).html(statusReturnProvisorio(1));
-		}
-    });
-	
-	function enviaDados(dado){		
-    	$.ajax({
-		    url: url,
-		    data: { 'acao': dado},
-		    dataType: 'jsonp',
-		    crossDomain: true,
-		    jsonp: false,
-		    jsonpCallback: 'dados',
-		    success: function(data,status,xhr) {
-				// posso ler dados e retoranar na pagina para avisar se a luz ta ligada ou desligada.
-				$('#00').html(statusReturn(data._pino0));
-				$('#01').html(statusReturn(data._pino1));
-				$('#02').html(statusReturn(data._pino2));
-				$('#03').html(statusReturn(data._pino3));
-				$('#04').html(statusReturn(data._pino4));
-				$('#05').html(statusReturn(data._pino5));
-				$('#06').html(statusReturn(data._pino6));
-				$('#00').attr('value',statusONOFF(data._pino0));
-				$('#01').attr('value',statusONOFF(data._pino1));
-				$('#02').attr('value',statusONOFF(data._pino2));
-				$('#03').attr('value',statusONOFF(data._pino3));
-				$('#04').attr('value',statusONOFF(data._pino4));
-				$('#05').attr('value',statusONOFF(data._pino5));
-				$('#06').attr('value',statusONOFF(data._pino6));
-				$('#C00').prop("checked", verificarChecked(data._pino0));
-				$('#C01').prop("checked", verificarChecked(data._pino1));
-				$('#C02').prop("checked", verificarChecked(data._pino2));
-				$('#C03').prop("checked", verificarChecked(data._pino3));
-				$('#C04').prop("checked", verificarChecked(data._pino4));
-				$('#C05').prop("checked", verificarChecked(data._pino5));
-				$('#C06').prop("checked", verificarChecked(data._pino6));
-
-		    }
-		  });
-        return false;
-    }
-
-	function statusReturnProvisorio (valor) {
-    	if(valor == 0) {
-    		return 'ON';
-    	}
-    	else if(valor == 1) {
-    		return "OFF";
-    	}
-    	// else { return "Desconhecido";}
-    }
-	
-    function statusReturn (valor) {
-    	if(valor == 0) {
-    		return '<i class="fa fa-check icon"></i>';
-    	}
-    	else if(valor == 1) {
-    		return "OFF";
-    	}
-    	// else { return "Desconhecido";}
-    }
-	
-	function statusONOFF (valor) {
-    	if(valor == 0) {
-    		return "OF";
-    	}
-    	else if(valor == 1) {
-    		return "ON";
-    	}
-    }
-	
-	function verificarChecked (valor) {
-    	if(valor == 0) {
-    		return true;
-    	}
-    	else if(valor == 1) {
-    		return false;
-    	}
-    }
-
-
-	function fazerRequisicao(){
-    	$.ajax({
-		    url: url,
-		    data: { '': ''}, // usaremos em proximas versões
-		    dataType: 'jsonp', // IMPORTANTE
-		    crossDomain: true, // IMPORTANTE
-		    jsonp: false,
-		    jsonpCallback: 'dados', // IMPORTANTE
-		    success: function(data,status,xhr) {
-
-				$('#displayTemp00').html(data.temperatura+'º');
-				$('#00').html(statusReturn(data._pino0));
-				$('#01').html(statusReturn(data._pino1));
-				$('#02').html(statusReturn(data._pino2));
-				$('#03').html(statusReturn(data._pino3));
-				$('#04').html(statusReturn(data._pino4));
-				$('#05').html(statusReturn(data._pino5));
-				$('#06').html(statusReturn(data._pino6));
-				$('#00').attr('value',statusONOFF(data._pino0));
-				$('#01').attr('value',statusONOFF(data._pino1));
-				$('#02').attr('value',statusONOFF(data._pino2));
-				$('#03').attr('value',statusONOFF(data._pino3));
-				$('#04').attr('value',statusONOFF(data._pino4));
-				$('#05').attr('value',statusONOFF(data._pino5));
-				$('#06').attr('value',statusONOFF(data._pino6));
-				$('#C00').prop("checked", verificarChecked(data._pino0));
-				$('#C01').prop("checked", verificarChecked(data._pino1));
-				$('#C02').prop("checked", verificarChecked(data._pino2));
-				$('#C03').prop("checked", verificarChecked(data._pino3));
-				$('#C04').prop("checked", verificarChecked(data._pino4));		
-				$('#C05').prop("checked", verificarChecked(data._pino5));
-				$('#C06').prop("checked", verificarChecked(data._pino6));
-		    }
-		  });
-        return false;
-    }
-	fazerRequisicao();
-    // A cada 1000 milis (1 segundo), faça uma nova requisição.
-    setInterval(fazerRequisicao, 6000);
-  	// Acredito que 3000 (3 segundos) ou mais seja o ideal para um serviço online.
-  	// Caso use local host, arrisco colocar ate 400 milis, você tera uma boa resposta. 
-});
   
+    <div class="container">
+        <div class="card card-container">
+            <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+            <img id="profile-img" class="profile-img-card" src="img/avatar_2x.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <span id="reauth-email" class="reauth-email"></span>
+                <input type="text" id="usuario" class="form-control" placeholder="Usuario" required autofocus>
+                <input type="password" id="senha" class="form-control" placeholder="Senha" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input id="lembrar" type="checkbox" value="remember-me" style="transform: scale(2.5);margin-left: -10px;"> <span style="padding-left: 20px;">Lembrar senha</span>
+                    </label>
+                </div>
+                <a class="btn btn-lg btn-primary btn-block btn-signin" style="padding-top: 9px">Entrar</a>
+            </form><!-- /form -->
+            <!--<a href="#" class="forgot-password">
+                Forgot the password?
+            </a>-->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+	
 
-function ajustar_video()
-{
-    var winW = $(window).width();
-    var divPort = $(".port");
-    divPort.css('width', (winW/4)-7);
-    var divCenter = $(".center");
-    divCenter.css('left', (((winW/18)*0.5)-1)+"%");
-}
 
-ajustar_video();
-
-$(function(){
-    $(window).resize(function(){
-		 ajustar_video();
-    });
-});
-
-</script>
 </body>
 </html>
+  <script>
+
+var sessaoNome = sessionStorage.getItem('usuario');
+var sessaoSenha = sessionStorage.getItem('senha');
+if( sessaoNome != ''){
+	$("#usuario").val(sessaoNome);
+	$("#senha").val(sessaoSenha);
+}
+
+$(".btn-signin").click(function(){
+	var nome = $("#usuario").val();
+	var senha = $("#senha").val();
+	if(nome == "admin" && senha == "cn@central"){
+		sessionStorage.setItem('acesso', 'logado');
+		window.location.replace("controle.html");
+		
+		if( $("#lembrar").is(':checked') ){
+			sessionStorage.setItem('usuario', nome);
+			sessionStorage.setItem('senha', senha);
+		}
+		//else
+		//	Storage.removeItem('usuario'); 
+	}
+
+});  
+  </script>
