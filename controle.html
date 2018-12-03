@@ -344,7 +344,7 @@ $(document).ready(function(){
 		  });
         return false;
     }
-	fazerRequisicao();
+	
     // A cada 1000 milis (1 segundo), faça uma nova requisição.
     setInterval(fazerRequisicao, 10000);
   	// Acredito que 3000 (3 segundos) ou mais seja o ideal para um serviço online.
@@ -368,6 +368,7 @@ $(function(){
     });
 });
 
+fazerRequisicao();
 </script>
 </body>
 </html>
